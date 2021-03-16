@@ -1,0 +1,25 @@
+footer {
+    width: 100%;
+    min-height: 140px;
+    padding: 85px 12px 84px;
+    overflow: hidden;
+    .footer {
+        display: flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: -moz-box;
+        justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+        &__img {
+            margin-right: 305px;
+        }
+         &__text {
+            font-size: 20px;
+            font-weight: 400;
+            text-align: right;
+            color: #2a2932;
+        }
+    }
+   
+
+}

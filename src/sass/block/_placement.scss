@@ -1,0 +1,43 @@
+.placement {
+    margin-top: 54px;
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -moz-box;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    &__conditions {
+        &_title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #505050;
+            text-transform: uppercase;
+        }
+        &_subtitle {
+            font-size: 16px;
+            font-weight: 400;
+            color: #505050;
+            margin-top: 11px;
+        }
+    }
+    button {
+        max-width: 216px;
+        width: 100%;
+        height: 45px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;               
+        -ms-border-radius: 10px;   
+        background-color: #32a961;
+        border: none;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+    }
+}

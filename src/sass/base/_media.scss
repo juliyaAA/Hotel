@@ -680,11 +680,55 @@
                 }
             }
             .residence {
+                padding: 12px;
                 .center {
                     margin-left: 121px;
                 }
                 .left {
                     margin-left: 54px;
+                }
+                &__column {
+                    font-size: 14px;
+                    &_txt {
+                        font-size: 12px;
+                    }
+                    &_option {
+                        font-size: 13px;
+                        margin-top: 20px;
+                    }
+                    &_options {
+                        margin-top: 20px;
+                        min-height: 53px;
+                    }
+                    &_span {
+                        float: none;
+                        margin-bottom: 10px;
+                        min-height: 60px;
+                        font-size: 13px;
+                    }
+                    &_pay {
+                        flex-wrap: wrap;
+                        -webkit-flex-wrap: wrap;
+                        display: flex;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: -moz-box;
+                        img {
+                            margin-right: 14px;
+                        }
+                    }
+                }
+                &__wrap {
+                    &_icons {
+                        margin-bottom: 10px;
+                    }
+                    &_text {
+                        margin-top: 5px;
+                        font-size: 11px;
+                    }
+                }
+                &__block {
+                    margin-top: 30px;
                 }
                 &__wrap {
                     margin-bottom: 40px;
@@ -699,33 +743,6 @@
                         margin-left: 0;
                         font-size: 13px;
                         text-align: center;
-                    }
-                }
-                &__column {
-                    font-size: 15px;
-                    &_col {
-                        width: 100%;
-                    }
-                    &_relativ {
-                        width: 100%;
-                    }
-                    &_absolut {
-                        width: 48%;
-                    }
-                    &_txt {
-                        font-size: 14px;
-                    }
-                    &_option {
-                        padding: 10px;
-                    }
-                    &_span {
-                        min-height: 165px;
-                        width: 43%;
-                        font-size: 15px;
-                    }
-                    &_pay img {
-                        margin-bottom: 10px;
-                        margin-left: 1px;
                     }
                 }
             }
@@ -785,6 +802,83 @@
         .footer {
             &__text {
                 font-size: 15px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 425px) {
+    .main {
+        .promo {
+            &__name {
+                font-size: 24px;
+            }
+            .residence__column_absolut {
+                width: 100px;
+            }
+        }
+    }
+    .slider {
+        .owl-prev {
+            right: 162px;
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .main {
+        .promo {
+            &__name_star {
+                margin-bottom: 12px;
+            }
+            &__address_option {
+                width: 30%;
+            }
+            &__apartments_picture {
+                min-height: 105px;
+            }
+            .carousel {
+                margin-top: 15px;
+                &__item {
+                    display: block;
+                    margin: 0 auto;
+                    height: 140px;
+                }
+                .owl-prev {
+                    right: 7px;
+                    top: 7px;
+                    width: 53px;
+                    height: 53px;
+                }
+            }
+            .application__content_star {
+                height: 45px;
+            }
+        }
+    }
+    .slider {
+        height: 140px;
+        &__items_inner {
+            width: 245px;
+        }
+        .owl-prev {
+            right: 40px;
+        }
+    }
+    .subscription {
+        margin-top: 0;
+        padding: 30px 10px;
+        &__main {
+            &_header {
+                font-size: 22px;
+            }
+            &_subheader {
+                font-size: 18px;
+            }
+        }
+        form {
+            input[type="submit"],
+            input[type="email"] {
+                height: 47px;
+                font-size: 13px;
             }
         }
     }
@@ -887,20 +981,6 @@
             &__apartments_picture {
                 min-height: 94px;
             }
-            .carousel {
-                margin-top: 15px;
-                &__item {
-                    display: block;
-                    margin: 0 auto;
-                    height: 140px;
-                }
-                .owl-prev {
-                    right: 7px;
-                    top: 7px;
-                    width: 53px;
-                    height: 53px;
-                }
-            }
             .application {
                 &__content {
                     &_star {
@@ -926,51 +1006,6 @@
                     margin: 0 auto;
                     display: block;
                     margin-top: 10px;
-                }
-            }
-            .residence {
-                padding: 12px;
-                &__column {
-                    font-size: 14px;
-                    &_txt {
-                        font-size: 12px;
-                    }
-                    &_option {
-                        font-size: 13px;
-                        margin-top: 20px;
-                    }
-                    &_options {
-                        margin-top: 20px;
-                        min-height: 53px;
-                    }
-                    &_span {
-                        float: none;
-                        margin-bottom: 10px;
-                        min-height: 0;
-                    }
-                    &_pay {
-                        flex-wrap: wrap;
-                        -webkit-flex-wrap: wrap;
-                        display: flex;
-                        display: -webkit-flex;
-                        display: -ms-flexbox;
-                        display: -moz-box;
-                        img {
-                            margin-right: 14px;
-                        }
-                    }
-                }
-                &__wrap {
-                    &_icons {
-                        margin-bottom: 10px;
-                    }
-                    &_text {
-                        margin-top: 5px;
-                        font-size: 11px;
-                    }
-                }
-                &__block {
-                    margin-top: 30px;
                 }
             }
         }
@@ -1007,6 +1042,7 @@
         }
     }
     .slider {
+        height: 300px;
         top: 0;
         &__items {
             position: inherit;
@@ -1015,25 +1051,6 @@
             }
             .owl-prev {
                 right: 7px;
-            }
-        }
-    }
-    .subscription {
-        margin-top: 0;
-        padding: 30px 10px;
-        &__main {
-            &_header {
-                font-size: 22px;
-            }
-            &_subheader {
-                font-size: 18px;
-            }
-        }
-        form {
-            input[type="submit"],
-            input[type="email"] {
-                height: 47px;
-                font-size: 13px;
             }
         }
     }

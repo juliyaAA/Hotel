@@ -21,17 +21,14 @@
         min-height: 25px;
         margin-bottom: 50px;
         &-flex {
-            display: flex;
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: -moz-box;
             max-width: 232px;
             width: 100%;
         }
         &_icons {
-            width: 31px;
-            height: 31px;
+            width: 32px;
+            height: 54px;
+            float: left;
+            margin-right: 10px;
             img {
                 width: 100%;
             }
@@ -85,7 +82,6 @@
             font-size: 16px;
             font-weight: 400;
             color: #505050;
-            margin-top: 18px;
             span {
                 font-weight: 600;
             }
@@ -119,6 +115,7 @@
             width: 61px;
             height: 36px;
             margin-right: 23px;
+            margin-bottom: 18px;
         }
 
     }

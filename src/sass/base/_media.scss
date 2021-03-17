@@ -21,11 +21,18 @@
             padding: 0 2%;
         }
         .promo {
-            width: 70%;
+            width: 67%;
             &__info {
                 padding: 0 10px;
+                &_ul {
+                    flex-wrap: wrap;
+                    -webkit-flex-wrap: wrap;
+                    -ms-flex-wrap: wrap;
+                    justify-content: center;
+                }
                 &_list a {
                     font-size: 13px;
+                    margin-right: 7px;
                 }
             }
             &__apartments {
@@ -45,23 +52,24 @@
                 width: 90%;
             }
             .application {
+                width: 100%;
                 &__content {
-                    width: 50%;
+                    width: 49%;
                     &_title {
                         padding-top: 0;
                     }
                     &_descr {
                         font-size: 14px;
                     }
-                    &__info {
-                        max-width: 334px;
-                    }
+                }
+                &__info {
+                    width: 50%;
                 }
             }
             .wrapper {
                 position: relative;
                 top: 0;
-                left: -240px;
+                left: -250px;
                 overflow: inherit;
                 min-height: 1045px;
                 &__services {
@@ -93,9 +101,11 @@
                     width: 50%;
                 }
                 &__column {
-                    width: 50%;
+                    &_absolut {
+                        width: 50%;
+                    }
                     &_option {
-                        width: 484px;
+                        width: 100%;
                     }
                     &_txt {
                         margin-top: 0;
@@ -145,7 +155,7 @@
             left: 0;
             top: 140px;
             img {
-                width: 85%;
+                width: 70%;
             }
         }
     }
@@ -180,24 +190,46 @@
             }
         }
     }
+    .navigation .find {
+        display: block;
+        margin-left: 20px;
+    }
     .main {
+        .aside {
+            display: block;
+            position: absolute;
+            z-index: 99999;
+            -webkit-transition: 0.5s all;
+            transition: 0.5s all;
+            left: -100%;
+            &_absolute {
+                left: 0;
+            }
+        }
         .promo {
-            width: 64%;
+            width: 100%;
             .shell {
+                margin-top: 10px;
                 padding: 15px 15px;
             }
             &__info {
-                padding: 0;
+                padding: 0 5px;
                 &_list {
                     margin-top: 10px;
+                    margin-right: 10px;
                     a {
-                        font-size: 10px;
+                        font-size: 13px;
                     }
                 }
             }
-            &__address_option {
-                width: 172px;
-                padding-top: 13px;
+            &__address {
+                &_option {
+                    width: 172px;
+                    padding-top: 13px;
+                }
+                &_item {
+                    font-size: 14px;
+                }
             }
             &__apartments {
                 &_picture {
@@ -208,24 +240,28 @@
                 }
             }
             .carousel {
-                margin-top: 0;
+                margin-top: 15px;
                 .owl-prev {
                     right: -4px;
                 }
             }
-            .application {
-                display: block;
-                &__info {
-                    display: block;
-                    margin: 0 auto;
-                    margin-top: 10px;
-                }
-                &__content {
-                    width: 95%;
-                }
-            }
             .wrapper {
-                left: -300px;
+                left: -0;
+                width: 100%;
+                &__flex-div {
+                    width: 32%;
+                }
+                &__services {
+                    &_icon {
+                        margin-right: 10px;
+                    }
+                    &_header {
+                        font-size: 15px;
+                    }
+                    &_subheader {
+                        font-size: 11px;
+                    }
+                }
             }
             .media {
                 position: relative;
@@ -237,17 +273,18 @@
             .residence {
                 position: relative;
                 top: 0;
-                left: -300px;
-                width: 900px;
+                left: 0;
+                width: 100%;
                 &__column {
                     width: 70%;
-                    &_option {
-                        width: 100%;
-                    }
                 }
             }
-            .placement button {
-                width: 26%;
+            .placement {
+                left: 0;
+                width: 100%;
+                button {
+                    width: 26%;
+                }
             }
         }
     }
@@ -270,10 +307,10 @@
         }
     }
     .phone__img {
-        left: 14px;
-        top: 106px;
+        left: 0;
+        top: 130px;
         img {
-            width: 77%;
+            width: 65%;
         }
     }
     .subscription {
@@ -296,8 +333,18 @@
         }
     }
 }
+@media screen and (max-width: 965px) {
+    .slider {
+        .owl-item.active + .active + .active {
+            opacity: 0.4;
+        }
+        .owl-prev {
+            right: 150px;
+        }
+    }
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 815px) {
     header {
         nav {
             position: relative;
@@ -383,29 +430,22 @@
             }
         }
     }
-    .navigation .find {
-        display: block;
-        margin-left: 20px;
-    }
+}
+@media screen and (max-width: 768px) {
     .main {
-        .aside {
-            display: block;
-            position: absolute;
-            z-index: 99999;
-            -webkit-transition: 0.5s all;
-            transition: 0.5s all;
-            left: -100%;
-            &_absolute {
-                left: 0;
-            }
-        }
         .promo {
-            width: 100%;
             &__info {
                 padding: 0;
                 &_list a {
                     font-size: 12px;
                 }
+            }
+            &__descr {
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            &__address_item {
+                line-height: 1.3;
             }
             &__apartments {
                 &_picture {
@@ -413,24 +453,6 @@
                 }
                 &_bagr a {
                     font-size: 15px;
-                }
-            }
-            .application {
-                display: flex;
-                &__content {
-                    width: 50%;
-                    &_title {
-                        padding-top: 0;
-                    }
-                    &_descr {
-                        font-size: 14px;
-                    }
-                }
-                &__info {
-                    width: 45%;
-                    &_form {
-                        padding-left: 20px;
-                    }
                 }
             }
             .wrapper {
@@ -469,9 +491,6 @@
                     &_relativ {
                         max-width: 435px;
                         width: 100%;
-                    }
-                    &_absolut {
-                        width: 179px;
                     }
                     &_option {
                         width: 100%;
@@ -515,7 +534,6 @@
             opacity: 0.4;
         }
         .owl-prev {
-            right: 193px;
             width: 80px;
             height: 80px;
         }
@@ -532,6 +550,22 @@
             margin: 0 auto;
             float: inherit;
             width: 100%;
+        }
+        &__form form {
+            justify-content: space-between;
+            -webkit-box-pack: justify;
+            -moz-box-pack: justify;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            input[type="email"] {
+                width: 55%;
+                font-size: 17px;
+                margin-right: 0;
+            }
+            input[type="submit"] {
+                width: 40%;
+                font-size: 17px;
+            }
         }
     }
     footer {
@@ -562,16 +596,16 @@
     .main {
         .promo {
             &__info {
-                &_ul {
-                    flex-wrap: wrap;
-                    -webkit-flex-wrap: wrap;
-                }
                 &_list {
                     margin-bottom: 4px;
                     a {
                         font-size: 11px;
                     }
                 }
+            }
+            &__address_option {
+                height: 40px;
+                font-size: 12px;
             }
             .application {
                 flex-direction: column;
@@ -585,8 +619,21 @@
                     margin-top: 20px;
                 }
             }
-            .residence__column_pay img {
-                margin-bottom: 5px;
+            .residence {
+                &__column_pay img {
+                    margin-bottom: 5px;
+                }
+                &__wrap {
+                    &_icons {
+                        float: inherit;
+                        display: block;
+                        margin: 0 auto;
+                        height: 40px;
+                    }
+                    &_text {
+                        text-align: center;
+                    }
+                }
             }
             .placement button {
                 width: 25%;
@@ -607,6 +654,29 @@
     }
 }
 @media screen and (max-width: 555px) {
+    .main {
+        .promo {
+            .wrapper {
+                &__title {
+                    font-size: 18px;
+                }
+                &__flex {
+                    width: 100%;
+                    &-div {
+                        width: 95%;
+                    }
+                }
+                &__services {
+                    &_header {
+                        font-size: 16px;
+                    }
+                    &_subheader {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
     .slider {
         .owl-item.active + .active {
             opacity: 0.4;
@@ -619,7 +689,7 @@
     }
     .main {
         .promo {
-            &__name h1 {
+            &__name {
                 font-size: 22px;
             }
             &__address {
@@ -746,6 +816,14 @@
                     }
                 }
             }
+            .wrapper {
+                &__title {
+                    font-size: 18px;
+                }
+                &__flex-div {
+                    width: 50%;
+                }
+            }
         }
     }
     .response {
@@ -772,7 +850,7 @@
     .slider {
         top: -175px;
         .owl-prev {
-            right: 201px;
+            right: 178px;
             width: 60px;
             height: 60px;
         }
@@ -791,9 +869,11 @@
                 margin-top: 42px;
             }
         }
-        form input[type="submit"] {
-            width: 35%;
-            font-size: 17.5px;
+        form {
+            input[type="email"],
+            input[type="submit"] {
+                font-size: 15px;
+            }
         }
     }
     footer {
@@ -810,7 +890,19 @@
     .main {
         .promo {
             &__name {
-                font-size: 24px;
+                font-size: 21px;
+            }
+            &__rating {
+                &_recital {
+                    margin-right: 5px;
+                    font-size: 11px;
+                }
+                &_number {
+                    width: 51px;
+                    height: 52px;
+                    padding-top: 8px;
+                    font-size: 22px;
+                }
             }
             .residence__column_absolut {
                 width: 100px;
@@ -818,12 +910,23 @@
         }
     }
     .slider {
+        &__items {
+            &_inner {
+                min-height: 125px;
+            }
+            &_comment {
+                font-size: 13px;
+            }
+            &_person {
+                margin-top: 20px;
+            }
+        }
         .owl-prev {
-            right: 162px;
+            right: 140px;
         }
     }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 385px) {
     .main {
         .promo {
             &__name_star {
@@ -849,18 +952,30 @@
                     height: 53px;
                 }
             }
-            .application__content_star {
-                height: 45px;
+            .application {
+                &__info {
+                    &_form input[placeholder] {
+                        width: 80%;
+                        font-size: 12px;
+                    }
+                    &_form-num {
+                        width: 85%;
+                    }
+                }
+                &__content_star {
+                    height: 45px;
+                }
             }
         }
     }
     .slider {
         height: 140px;
+        top: -145px;
         &__items_inner {
-            width: 245px;
+            width: 196px;
         }
         .owl-prev {
-            right: 40px;
+            right: 14px;
         }
     }
     .subscription {
@@ -1050,7 +1165,7 @@
                 width: 215px;
             }
             .owl-prev {
-                right: 7px;
+                right: -10px;
             }
         }
     }

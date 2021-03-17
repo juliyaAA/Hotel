@@ -44,14 +44,6 @@
     }
     &__descr {
         margin-top: 31px;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;               
-        -ms-border-radius: 10px;
-        box-shadow: 1.7px 13.9px 74.5px 1.5px rgba(0, 0, 0, 0.11);
-        -webkit-box-shadow: 1.7px 13.9px 74.5px 1.5px rgba(0, 0, 0, 0.11);
-        -moz-box-shadow: 1.7px 13.9px 74.5px 1.5px rgba(0, 0, 0, 0.11);
-        background-color: #f6f6f6;
         display: flex;
         display: -webkit-flex;
          display: -ms-flexbox;
@@ -78,7 +70,7 @@
             width: 16px;
             height: 16px;
             margin-right: 9px;
-            &:last-child() {
+            &:last-child {
                 margin-right: 0;
             }
             img {

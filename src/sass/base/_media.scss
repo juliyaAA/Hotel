@@ -336,6 +336,9 @@
             margin-right: 175px;
         }
     }
+    .popup__slider {
+        margin-top: 20%;
+    }
 }
 @media screen and (max-width: 965px) {
     .slider {
@@ -685,6 +688,9 @@
         .owl-item.active + .active {
             opacity: 0.4;
         }
+    }
+    .popup__slider {
+        margin-top: 35%;
     }
 }
 @media screen and (max-width: 480px) {

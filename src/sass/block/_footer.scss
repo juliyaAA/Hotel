@@ -4,12 +4,12 @@ footer {
     padding: 85px 12px 84px;
     overflow: hidden;
     .footer {
-        display: flex;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: -moz-box;
-        justify-content: flex-end;
+        display: flex;
         -webkit-justify-content: flex-end;
+        justify-content: flex-end;
         &__img {
             margin-right: 305px;
         }

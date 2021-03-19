@@ -48,10 +48,18 @@ $(document).ready(function () {
             }
         }
     });
+    // Закрытие gallery
+    jQuery(function($){
+        $(document).mouseup(function (e){ // событие клика по веб-документу
+            var div = $(".fotorama img"); // тут указываем ID элемента
+            if (!div.is(e.target) // если клик был не по нашему блоку
+                && div.has(e.target).length === 0) { // и не по его дочерним элементам
+                $("#popup").hide(); // скрываем его
+            }
+        });
+    });
 
 });
-
-
 // Menu
 const menu = document.querySelector('.menu'),
     menuItem = document.querySelectorAll('.menu_item'),
@@ -72,9 +80,22 @@ menuItem.forEach(item => {
 // find
 const find = document.querySelector('.find'),
     aside = document.querySelector('.aside');
-    console.log(find);
-    console.log(aside);
 
 find.addEventListener('click', () => {
     aside.classList.toggle('aside_absolute');
+});
+
+// gallery
+const gallery = document.getElementById('gallery'),
+    popup = document.getElementById('popup');
+
+gallery.addEventListener('click', () => {
+    popup.style.display = 'block';
+
+});
+// Закрытие gallery по кнопке Esc
+window.addEventListener("keydown", (event) => {
+    if ( event.keyCode == 27 ) {
+        popup.style.display = 'none';
+    } 
 });

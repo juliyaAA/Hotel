@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media screen  and (max-width: 1420px) {
     header {
         padding: 0 1.5%;
         nav {
@@ -21,7 +21,7 @@
             padding: 0 2%;
         }
         .promo {
-            width: 67%;
+            width: 70%;
             &__info {
                 padding: 0 10px;
                 &_ul {
@@ -169,7 +169,11 @@
         padding: 50px 12px 84px;
     }
 }
-
+@media screen  and (max-width: 1200px) {
+    .main .promo {
+        width: 67%;
+    }
+}
 @media screen and (max-width: 992px) {
     header {
         nav {

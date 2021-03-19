@@ -4,11 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Hotel</title>
 	<link rel="stylesheet" href="src/css/reset.css">
 	<link rel="stylesheet" href="src/css/fonts.css">
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 	<link rel="stylesheet" href="src/owlcarousel/owl.carousel.min.css">
 	<link rel="stylesheet" href="src/owlcarousel/owl.theme.default.min.css">
 	<link rel="stylesheet" href="src/css/style.min.css">
@@ -135,7 +135,8 @@
 					<section class="promo">
 						<div class="promo__info">
 							<ul class="promo__info_ul">
-								<li class="promo__info_list"><a href="#subscription">Информация об апартаментах и стоимости</a>
+								<li class="promo__info_list"><a href="#subscription">Информация об апартаментах и
+										стоимости</a>
 								</li>
 								<li class="promo__info_list"><a href="#wrapper">Удобства и услуги</a></li>
 								<li class="promo__info_list"><a href="#placement">Условия размещения</a></li>
@@ -210,7 +211,7 @@
 										<div class="promo__apartments_img">
 											<img src="src/img/fon4.png" alt="apartments">
 											<div class="promo__apartments_bagr">
-												<a href="#">+12 фотографий</a>
+												<a id="gallery" href="#">+12 фотографий</a>
 											</div>
 										</div>
 
@@ -918,7 +919,34 @@
 			</div>
 		</div>
 	</footer>
+
+	<!-- gallery -->
+	<div id="popup" class="popup">
+		<div class="container">
+			<div class="popup__slider">
+				<div class="fotorama" data-width="75%" data-minwidth="250" data-minheight="150" data-allowfullscreen="native"
+					data-autoplay="true" data-nav="thumbs" >
+					<img src="src/img/slider_1.jpeg" alt="hotel">
+					<img src="src/img/slider_2.jpg" alt="hotel">
+					<img src="src/img/slider_3.jpg" alt="hotel">
+					<img src="src/img/slider_4.jpg" alt="hotel">
+					<img src="src/img/slider_5.jpg" alt="hotel">
+					<img src="src/img/slider_6.jpg" alt="hotel">
+					<img src="src/img/slider_7.jpg" alt="hotel">
+					<img src="src/img/slider_8.jpg" alt="hotel">
+					<img src="src/img/slider_9.jpg" alt="hotel">
+					<img src="src/img/slider_10.jpg" alt="hotel">
+					<img src="src/img/slider_5.jpg" alt="hotel">
+					<img src="src/img/slider_11.jpeg" alt="hotel">
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="src/js/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 	<script src="src/owlcarousel/owl.carousel.min.js"></script>
 	<script src="src/js/script.js"></script>
 </body>

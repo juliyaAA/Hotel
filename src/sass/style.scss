@@ -1,11 +1,12 @@
 * {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 body {
     background: rgba(0, 0, 0, 0.06);
     overflow-x: hidden;
+    overflow-y: visible;
 }
 .container {
     max-width: 1410px;
@@ -26,7 +27,7 @@ body {
     padding-top: 8px;
     background-color: #32a961;
     border-radius: 10px 10px 10px 0;
-    -webkit-border-radius: 10px 10px 10px 0; 
+    -webkit-border-radius: 10px 10px 10px 0;
     -moz-border-radius: 10px 10px 10px 0;
     -ms-border-radius: 10px 10px 10px 0;
     font-size: 18px;
@@ -37,8 +38,8 @@ body {
     cursor: pointer;
 }
 .select {
-    appearance:none;
-    background: url('../icons/str.svg') no-repeat right;
+    appearance: none;
+    background: url("../icons/str.svg") no-repeat right;
     background-position-x: calc(100% - 8px);
     background-color: #fff;
     padding-left: 14px;
@@ -77,22 +78,23 @@ body {
 }
 nav ul li:last-child::after {
     content: "";
- }
+}
 
-@import 'block/menu';
-@import 'block/navigation';
-@import 'block/main';
-@import 'block/appalication';
-@import 'block/carousel';
-@import 'block/promo';
-@import 'block/aside';
-@import 'block/wrapper';
-@import 'block/placement';
-@import 'block/residence';
-@import 'block/divide';
-@import 'block/response';
-@import 'block/subscription';
-@import 'block/footer';
-@import 'block/phone'; 
-@import 'block/slider'; 
-@import 'base/media';
+@import "block/menu";
+@import "block/navigation";
+@import "block/main";
+@import "block/appalication";
+@import "block/carousel";
+@import "block/promo";
+@import "block/aside";
+@import "block/wrapper";
+@import "block/placement";
+@import "block/residence";
+@import "block/divide";
+@import "block/response";
+@import "block/subscription";
+@import "block/footer";
+@import "block/phone";
+@import "block/slider";
+@import "block/popup";
+@import "base/media";

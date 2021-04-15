@@ -1,9 +1,7 @@
 .main {
     overflow: hidden;
-    height: auto;
     background: #fefefe;
-    font-family: 'Montserrat', sans-serif;
-    padding-bottom: 4%;
+    padding-bottom: 85px;
     &__container {
         top: -275px;
         width: 100%;
@@ -12,15 +10,6 @@
     }
     &__over {
         display: flex;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: -moz-box;
-        justify-content: space-between;
-        -webkit-box-pack: justify;
-        -moz-box-pack: justify;
-        -webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
         width: 100%;
     }
 }

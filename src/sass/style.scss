@@ -1,21 +1,23 @@
+@import "base/variables";
 * {
-    font-family: "Montserrat", sans-serif;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-html{
+html {
+    width: 100%;
     max-width: 100%;
     overflow-x: hidden;
 }
-
 body {
     background: rgba(0, 0, 0, 0.06);
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
-    overflow-y: visible;
 }
 .container {
-    max-width: 1410px;
+    max-width: 1440px;
     width: 100%;
+    padding: 0 15px;
     margin: 0 auto;
     display: block;
 }
@@ -25,42 +27,19 @@ body {
     background-color: #f6f6f6;
     position: relative;
 }
-.find {
-    display: none;
-    width: 87px;
-    height: 37px;
-    padding-top: 8px;
-    background-color: #32a961;
-    border-radius: 10px 10px 10px 0;
-    -webkit-border-radius: 10px 10px 10px 0;
-    -moz-border-radius: 10px 10px 10px 0;
-    -ms-border-radius: 10px 10px 10px 0;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
-    color: #fff;
-    margin-top: -10px;
-    cursor: pointer;
-}
-.select {
-    appearance: none;
-    background: url("../icons/str.svg") no-repeat right;
-    background-position-x: calc(100% - 8px);
-    background-color: #fff;
-    padding-left: 14px;
-    width: 12px;
-    height: 6px;
-}
 .max-width {
-    width: 1050px;
+    max-width: 1050px;
+    width: 100%;
     height: 1px;
 }
 .midlle-width {
-    width: 1002px;
+    max-width: 1002px;
+    width: 100%;
     height: 2px;
 }
 .min-width {
-    width: 991px;
+    max-width: 991px;
+    width: 100%;
     height: 1px;
 }
 .left {
@@ -73,7 +52,7 @@ body {
     width: 218px;
     height: 4px;
     margin-top: 12px;
-    background-color: #32a961;
+    background-color: $green;
 }
 .line-width {
     width: 139px;
@@ -85,7 +64,7 @@ nav ul li:last-child::after {
     content: "";
 }
 
-@import "block/menu";
+@import "block/header";
 @import "block/navigation";
 @import "block/main";
 @import "block/appalication";
@@ -99,7 +78,6 @@ nav ul li:last-child::after {
 @import "block/response";
 @import "block/subscription";
 @import "block/footer";
-@import "block/phone";
 @import "block/slider";
 @import "block/popup";
 @import "base/media";

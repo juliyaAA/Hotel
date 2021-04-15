@@ -1,39 +1,28 @@
 .wrapper {
-    min-height: 1140px;
     padding: 48px 0;
     overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
+    &__arrow {
+        display: none;
+    }
     &__title {
         font-size: 20px;
         font-weight: 700;
         color: #505050;
-        span {
-            text-transform: uppercase;
-        }
     }
     &__flex {
         display: flex;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: -moz-box;
         justify-content: space-between;
-        -webkit-box-pack: justify;
-        -moz-box-pack: justify;
-        -webkit-justify-content: space-between;
-	    -ms-flex-pack: justify;
         &-div {
             max-width: 345px;
             width: 100%;
+            #btn {
+                display: none;
+            }
         }
     }
     &__services {
         margin-top: 35px;
         display: flex;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: -moz-box;
         &_icon {
             margin-right: 20px;
             width: 32px;
@@ -42,6 +31,7 @@
                 width: 100%;
                 display: block;
                 margin: 0 auto;
+                height: 100%;
             }
         }
         &_header {
@@ -54,21 +44,22 @@
             font-size: 16px;
             font-weight: 400;
             color: #7a7a7a;
-            padding-left: 17px;
-            position: relative;
             margin-top: 25px;
-            &::before {
-                content: "";
-                width: 8px;
-                height: 8px;
-                background-color: #32a961;
-                position: absolute;
-                margin-top: 3px;
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                left: 0;
+            span {
+                display: inline-block;
+                width: 15px;
+                height: 11px;
+                position: relative;
+                &:before {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    background-color: $green;
+                    position: absolute;
+                    margin-top: 3px;
+                    border-radius: 50%;
+                    left: 0;
+                }
             }
         }
     }

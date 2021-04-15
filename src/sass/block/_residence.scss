@@ -1,52 +1,54 @@
 .residence {
-    width: 1050px;
-    min-height: 1358px;
+    max-width: 1050px;
+    width: 100%;
     margin-top: 29px;
-    padding: 15px 27px 50px;
+    padding: 35px 28px 50px;
     border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;               
-    -ms-border-radius: 10px; 
     box-shadow: 1.7px 13.9px 74.5px 1.5px rgba(0, 0, 0, 0.11);
-    -webkit-box-shadow: 1.7px 13.9px 74.5px 1.5px rgba(0, 0, 0, 0.11);
-    -moz-box-shadow: 1.7px 13.9px 74.5px 1.5px rgba(0, 0, 0, 0.11);
     background-color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
     overflow: hidden;
     &__wrap {
         display: flex;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: -moz-box;
         min-height: 25px;
         margin-bottom: 50px;
+        position: relative;
+        font-size: 16px;
         &-flex {
             max-width: 232px;
             width: 100%;
+            height: 35px;
         }
         &_icons {
             width: 32px;
             height: 54px;
             float: left;
-            margin-right: 10px;
+            margin-right: 13px;
             img {
                 width: 100%;
+                height: auto;
+                display: block;
             }
         }
         &_text {
             margin-left: 12px;
-            font-size: 16px;
             font-weight: 400;
             color: #505050;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
         }
     }
     &__column {
         max-width: 635px;
         width: 100%;
         margin-left: 25px;
-        font-size: 16px;
         font-weight: 400;
         color: #505050;
+        position: relative;
+        &_time  {
+            position: absolute;
+            top: -10px;
+        }
         &_col {
             position: relative;
             margin-top: 11px;
@@ -58,28 +60,23 @@
             width: 100%;
             height: 18px;
             border-radius: 9px;
-            -webkit-border-radius: 9px;
-            -moz-border-radius: 9px;               
-            -ms-border-radius: 9px; 
-            background-color: #e7e7e7;  
+            background-color: #e7e7e7;
         }
         &_absolut {
-            width: 225px;
+            max-width: 50%;
+            width: 100%;
             height: 18px;
             border-radius: 9px;
-            -webkit-border-radius: 9px;
-            -moz-border-radius: 9px;               
-            -ms-border-radius: 9px;  
             background-color: #32a961;
             position: absolute;
             top: 0;
             right: 0;
             &-left {
                 left: 0;
+                max-width: 40%;
             }
         }
         &_txt {
-            font-size: 16px;
             font-weight: 400;
             color: #505050;
             span {
@@ -87,29 +84,25 @@
             }
         }
         &_option {
-            width: 732px;
+            max-width: 732px;
+            width: 100%;
             min-height: 54px;
             padding: 11px 57px 8px 23px;
             border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;               
-            -ms-border-radius: 10px;  
             background-color: #e7e7e7;
-            font-size: 16px;
             font-weight: 400;
             color: #505050;
         }
         &_options {
             margin-top: 43px;
-            min-height: 53px;
+            display: flex;
+            justify-content: space-between;
         }
         &_span {
-            float: left;
-            margin-right: 64px;
-            font-size: 16px;
+            margin-right: 34px;
             font-weight: 700;
             color: #505050;
-            width: 121px;
+            max-width: 150px;
         }
         &_pay img {
             width: 61px;
@@ -117,10 +110,12 @@
             margin-right: 23px;
             margin-bottom: 18px;
         }
-
     }
     &__block {
         margin-top: 60px;
+        .residence__wrap .residence__wrap_text {
+            top: 0;
+            transform: translateY(0);
+        }
     }
-
 }

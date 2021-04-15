@@ -1,20 +1,15 @@
 .aside {
-    width: 100%;
     max-width: 330px;
+    width: 100%;
     height: 595px;
     padding: 19px 15px 14px 15px;
     border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;               
-    -ms-border-radius: 10px;   
-    background-color: #32a961; 
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
+    background-color: #32a961;
     &__label {
         font-size: 16px;
         font-weight: 400;
         color: #ffffff;
-        margin-top: 19px; 
+        margin-top: 19px;
         &_input {
             position: relative;
             img {
@@ -27,34 +22,32 @@
             &-color {
                 color: #5a5963;
                 font-weight: 400;
-                width: 100%;
-                max-width: 300px;
+                width: 300px;
                 height: 49px;
                 border-radius: 10px;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;               
-                -ms-border-radius: 10px;   
                 background-color: #ffffff;
                 border: none;
                 margin-top: 8px;
                 font-size: 16px;
                 padding: 17px 0 14px 63px;
-            }   
+            }
         }
     }
-    &__select select {
-        width: 145px;
-        height: 49px;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;               
-        -ms-border-radius: 10px;   
-        margin-top: 8px;
-        background-color: #ffffff;
-        border: none;
-        font-size: 16px;
-        padding: 13px 11px;
-        cursor: pointer;
+    &__select {
+        display: flex;
+        justify-content: space-between;
+        select {
+            appearance: revert;
+            width: 145px;
+            height: 49px;
+            border-radius: 10px;
+            margin-top: 8px;
+            background-color: #ffffff;
+            border: none;
+            font-size: 16px;
+            padding: 13px 11px;
+            cursor: pointer;
+        }
     }
     &__search {
         font-size: 25px;
@@ -77,40 +70,28 @@
         label {
             cursor: pointer;
             display: flex;
-            display: -webkit-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: -moz-box;
             .cust {
                 width: 15px;
                 height: 15px;
                 border-radius: 10px;
-                -webkit-border-radius: 10px;
-                -moz-border-radius: 10px;
-                -ms-border-radius: 10px;
                 background-color: #fff;
                 margin-right: 16px;
                 &_check {
                     border-radius: 8px;
-                    -webkit-border-radius: 8px;
-                    -moz-border-radius: 8px;
-                    -ms-border-radius: 8px;
                     width: 11px;
                     height: 11px;
                     display: none;
-                    background-color: green;
+                    background-color: $orange;
                     margin: 2px;
                 }
-            }   
+            }
         }
     }
     &__btn {
-        width: 300px;
+        max-width: 300px;
+        width: 100%;
         height: 49px;
         border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;               
-        -ms-border-radius: 10px;  
         background-color: #ffc000;
         border: none;
         margin-top: 22px;
@@ -124,20 +105,4 @@
             height: 23px;
         }
     }
-    &__select {
-        display: flex;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: -moz-box;
-        justify-content: space-between;
-        -webkit-box-pack: justify;
-        -moz-box-pack: justify;
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-    }
 }
-// .aside__label_input-color select::-moz-placeholder, select::-webkit-input-placeholder {
-//             color: #5a5963;
-//             opacity:1;
-//         } 

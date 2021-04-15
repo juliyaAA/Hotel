@@ -1,7 +1,7 @@
 .subscription {
     min-height: 418px;
     margin-top: 145px;
-    padding: 100px 64px 95px;
+    padding: 100px 0 95px 0;
     background: url('../img/bagraund.png') center center/cover no-repeat;
     overflow: hidden;
     &__main {
@@ -20,10 +20,10 @@
         }
     }
     &__right {
-        float: right;
         max-width: 785px;
         width: 100%;
-        margin-right: 64px;
+        margin-left: auto;
+        margin-right: auto;
     }
     &__form {
         margin-top: 81px;

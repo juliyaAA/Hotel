@@ -126,7 +126,9 @@ $(document).ready(function () {
         var number = $(this).index();
         sync1.data('owl.carousel').to(number, 300, true);
     });
-
+    $('.promo__apartments img').on('click', function () {
+        $('#popup').css('display', 'block');
+    });
     // Закрытие gallery
     jQuery(function ($) {
         $(document).mouseup(function (e) { // событие клика по веб-документу
@@ -137,6 +139,7 @@ $(document).ready(function () {
             }
         });
     });
+    // menu
     $('.hamburger').on('click', function () {
         $('.menu').slideToggle();
         $(this).toggleClass('active');
@@ -205,7 +208,6 @@ const gallery = document.getElementById('gallery'),
 
 gallery.addEventListener('click', () => {
     popup.style.display = 'block';
-
 });
 // Закрытие gallery по кнопке Esc
 window.addEventListener("keydown", (event) => {

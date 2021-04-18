@@ -1,11 +1,6 @@
 @media screen and (max-width: 1500px) {
-    .slider {
-        .owl-item.active + .active + .active {
-            opacity: 0.4;
-        }
-        .owl-next {
-            right: 18%;
-        }
+    .slider .owl-next {
+        right: 15%;
     }
     .subscription {
         padding: 95px 0;
@@ -25,6 +20,9 @@
 @media screen and (max-width: 1402px) {
     .application__content_title {
         padding-top: 0;
+    }
+    .slider .owl-item.active + .active + .active {
+        opacity: 0.4;
     }
 }
 @media screen and (max-width: 1380px) {
@@ -888,7 +886,8 @@
             height: 25px;
             margin-right: 15px;
         }
-        .parent__head, .children__head {
+        .parent__head,
+        .children__head {
             font-size: 13px;
         }
     }
@@ -897,5 +896,12 @@
     }
     footer .footer__text {
         font-size: 15px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .slider .owl-next {
+        right: 19px;
+        width: 40px;
+        height: 40px;
     }
 }

@@ -41,7 +41,7 @@ $(document).ready(function () {
             1005: {
                 items: 3
             },
-            1100: {
+            1400: {
                 items: 4
             }
         }

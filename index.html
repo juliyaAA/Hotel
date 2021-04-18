@@ -10,9 +10,10 @@
 	<link rel="stylesheet" href="src/css/fonts.css">
 	<link rel="stylesheet" href="src/owlcarousel/owl.carousel.min.css">
 	<link rel="stylesheet" href="src/owlcarousel/owl.theme.default.min.css">
-	<!-- <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css"> -->
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="src/css/style.min.css">
+
 </head>
 
 <body>
@@ -110,25 +111,69 @@
 							</div>
 							<div class="aside__label">
 								<label for="night">3 ночи</label>
-								<div class="aside__label_input" id="night">
-									<input class="aside__label_input-color" type="number" name="night" id="night"
-										placeholder="1 взросный">
-									<img src="src/icons/user.svg" alt="user">
+								<div class="box">
+									<div class="select">
+										<div class="select__head">1 взрослый</div>
+										<ul class="select__list" style="display: none;">
+											<li class="select__item">1 взрослый</li>
+											<input type="hidden" value="1" />
+											<li class="select__item">2 взрослых</li>
+											<input type="hidden" value="2" />
+											<li class="select__item">3 взрослых</li>
+											<input type="hidden" value="3" />
+											<li class="select__item">4 взрослых</li>
+											<input type="hidden" value="4" />
+											<li class="select__item">5 взрослых</li>
+											<input type="hidden" value="5" />
+											<li class="select__item">6 взрослых</li>
+											<input type="hidden" value="6" />
+											<li class="select__item">7 взрослых</li>
+											<input type="hidden" value="7" />
+											<li class="select__item">8 взрослых</li>
+											<input type="hidden" value="8" />
+											<li class="select__item">9 взрослых</li>
+											<input type="hidden" value="9" />
+										</ul>
+									</div>
 								</div>
 							</div>
 							<div class="aside__select">
-								<select class="aside__label_input-color select">
-									<option label="Без детей"></option>
-									<option label="1 ребенок"></option>
-									<option label="2 ребенка"></option>
-
-								</select>
-								<select class="aside__label_input-color select">
-									<option label="1 номер"></option>
-									<option label="2 номера"></option>
-									<option label="3 номера"></option>
-
-								</select>
+								<div class="box-min min-1">
+									<div class="select-min">
+										<div class="select__head_min">Без детей</div>
+										<ul class="select__list_min" style="display: none;">
+											<li class="select__item_min">Без детей</li>
+											<input type="hidden" value="Без детей" />
+											<li class="select__item_min">1 ребенок</li>
+											<input type="hidden" value="1 ребенок" />
+											<li class="select__item_min">2 детей</li>
+											<input type="hidden" value="2 детей" />
+											<li class="select__item_min">3 детей</li>
+											<input type="hidden" value="3 детей" />
+											<li class="select__item_min">4 детей</li>
+											<input type="hidden" value="4 детей" />
+											<li class="select__item_min">5 детей</li>
+											<input type="hidden" value="5 детей" />
+											<li class="select__item_min">6 детей</li>
+											<input type="hidden" value="6 детей" />
+										</ul>
+									</div>
+								</div>
+								<div class="box-min min-2">
+									<div class="select-min">
+										<div class="select__head_min">1 номер</div>
+										<ul class="select__list_min" style="display: none;">
+											<li class="select__item_min">1 номер </li>
+											<input type="hidden" value="1 номер" />
+											<li class="select__item_min">2 номера</li>
+											<input type="hidden" value="2 номерa" />
+											<li class="select__item_min">3 номера</li>
+											<input type="hidden" value="3 номерa" />
+											<li class="select__item_min">4 номера</li>
+											<input type="hidden" value="4 номерa" />
+										</ul>
+									</div>
+								</div>
 							</div>
 							<div class="aside__checkbox">
 								<input type="checkbox" id="box" name="check" value="circle">
@@ -143,18 +188,18 @@
 								<button class="aside__btn"><img src="src/icons/search.svg" alt="search"></button>
 							</div>
 						</div>
-
 					</aside>
 					<section class="promo">
 						<div class="promo__info">
 							<ul class="promo__info_ul">
-								<li class="promo__info_list"><a href="#" class="active">Информация об апартаментах и
+								<li class="promo__info_list"><a href="#application" class="active">Информация об
+										апартаментах и
 										стоимости</a>
 								</li>
-								<li class="promo__info_list"><a href="#">Удобства и услуги</a></li>
-								<li class="promo__info_list"><a href="#">Условия размещения</a></li>
-								<li class="promo__info_list"><a href="#">Примечания</a></li>
-								<li class="promo__info_list"><a href="#">Отзывы</a></li>
+								<li class="promo__info_list"><a href="#wrapper">Удобства и услуги</a></li>
+								<li class="promo__info_list"><a href="#placement">Условия размещения</a></li>
+								<li class="promo__info_list"><a href="#note">Примечания</a></li>
+								<li class="promo__info_list"><a href="#response">Отзывы</a></li>
 							</ul>
 						</div>
 						<div class="shell">
@@ -298,7 +343,6 @@
 											городе
 											Киев.</div>
 									</div>
-
 									<div class="application__content_descr">
 										Апартаменты Central Kiev расположены по разным адресам в Киеве. Гостям
 										предлагается
@@ -333,9 +377,53 @@
 														врослых Х и детей Х
 													</label>
 												</div>
-												<div>
-													<input class="application__info_form-input" type="text" name="count"
-														id="max" placeholder="2 взрослых   2 детей">
+												<div class="application__info_form-input">
+													<div class="wrap">
+														<div class="parent">
+															<div class="parent__head">2 взрослых</div>
+															<ul class="parent__list" style="display: none;">
+																<li class="parent__item">1 взрослый</li>
+																<input type="hidden" value="1 взрослый" />
+																<li class="parent__item">2 взрослых</li>
+																<input type="hidden" value="2 взрослых" />
+																<li class="parent__item">3 взрослых</li>
+																<input type="hidden" value="3 взрослых" />
+																<li class="parent__item">4 взрослых</li>
+																<input type="hidden" value="4 взрослых" />
+																<li class="parent__item">5 взрослых</li>
+																<input type="hidden" value="5 взрослых" />
+																<li class="parent__item">6 взрослых</li>
+																<input type="hidden" value="6 взрослых" />
+																<li class="parent__item">7 взрослых</li>
+																<input type="hidden" value="7 взрослых" />
+																<li class="parent__item">8 взрослых</li>
+																<input type="hidden" value="8 взрослых" />
+																<li class="parent__item">9 взрослых</li>
+																<input type="hidden" value="9 взрослых" />
+															</ul>
+														</div>
+													</div>
+													<div class="wrap">
+														<div class="children">
+															<div class="children__head">2 детей</div>
+															<ul class="children__list" style="display: none;">
+																<li class="children__item">Без детей</li>
+																<input type="hidden" value="Без детей" />
+																<li class="children__item">1 ребенок</li>
+																<input type="hidden" value="1 ребенок" />
+																<li class="children__item">2 детей</li>
+																<input type="hidden" value="2 детей" />
+																<li class="children__item">3 детей</li>
+																<input type="hidden" value="3 детей" />
+																<li class="children__item">4 детей</li>
+																<input type="hidden" value="4 детей" />
+																<li class="children__item">5 детей</li>
+																<input type="hidden" value="5 детей" />
+																<li class="children__item">6 детей</li>
+																<input type="hidden" value="6 детей" />
+															</ul>
+														</div>
+													</div>
 												</div>
 												<div class="application__info_form-check">
 													<div class="application__info_form-img">
@@ -350,7 +438,7 @@
 																placeholder="16.04.2021">
 														</div>
 														<div class="application__info_form-min">
-															<label for="datepicker-3">Выезд</label>
+															<label for="datepicker-3">Отъезд</label>
 															<input type="text" name="exitСheck" id="datepicker-3"
 																required="" placeholder="17.04.2021">
 														</div>
@@ -1065,7 +1153,7 @@
 	</footer>
 	<!-- gallery -->
 	<div id="popup" class="popup">
-		<div class="block">
+		<div class="block"> 
 			<div class="container">
 				<div class="popup__slider">
 					<div id="sync1" class="owl-carousel owl-theme">
@@ -1148,11 +1236,11 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<script src="src/js/jquery.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	<script src="src/owlcarousel/owl.carousel.min.js"></script>
 	<script src="src/js/script.js"></script>
 </body>

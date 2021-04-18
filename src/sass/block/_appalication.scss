@@ -60,6 +60,8 @@
                 margin-right: 17px;
                 img {
                     width: 100%;
+                    height: 100%;
+                    margin: 0 auto;
                     display: block;
                 }
             }
@@ -70,17 +72,171 @@
             }
             &-input {
                 max-width: 219px;
+                display: flex;
                 width: 100%;
                 height: 35px;
-                padding: 12px 43px 9px 9px;
                 border-radius: 5px;
                 background-color: #ffffff;
-                font-size: 14.5px;
                 font-weight: 400;
                 color: #2e2d37;
                 border: none;
                 margin-top: 8px;
                 margin-left: 44px;
+                .wrap {
+                    position: relative;
+                    max-width: 219px;
+                    width: 100%;
+                    height: 34px;
+                    padding-top: 8px;
+                }
+                .parent {
+                    max-width: 100px;
+                    height: 100%;
+                    color: #5a5963;
+                    font-weight: 400;
+                    background-color: #ffffff;
+                    border: none;
+                    border-radius: 5px;
+                    padding-left: 15px;
+                    &__head {
+                        width: 100%;
+                        height: 100%;
+                        line-height: 18px;
+                        color: #5a5963;
+                        cursor: pointer;
+                        font-size: 14px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        &.active {
+                            border-bottom-left-radius: 0;
+                        }
+                    }
+                    &__list {
+                        display: none;
+                        position: absolute;
+                        width: 100%;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        background: #fff;
+                        margin-top: 5px;
+                        max-height: 130px;
+                        text-align: center;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        z-index: 100;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #424348;
+                        scrollbar-color: #424348;
+                        scrollbar-width: thin;
+                        overscroll-behavior: contain;
+                        li:hover {
+                            color: #32a961;
+                            background: rgba(50, 169, 97, 0.1);
+                        }
+                        &.parent__list .parent__item {
+                            position: relative;
+                            border-top: 1px solid #d1d4da;
+                            padding: 9px;
+                            cursor: pointer;
+                            list-style-type: none;
+                        }
+                        &::-webkit-scrollbar {
+                            height: 4px;
+                            width: 4px;
+                        }
+                        &::-webkit-scrollbar-track {
+                            background: rgb(194, 192, 190);
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background-color: #7a9789;
+                            border-radius: 5px;
+                        }
+                    }
+                    &__item {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .children {
+                    max-width: 60px;
+                    height: 100%;
+                    color: #5a5963;
+                    font-weight: 400;
+                    background-color: #ffffff;
+                    border: none;
+                    border-radius: 5px;
+                    margin-left: 25px;
+                    &__head {
+                        width: 100%;
+                        height: 100%;
+                        line-height: 18px;
+                        color: #5a5963;
+                        cursor: pointer;
+                        font-size: 14px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        &.active {
+                            border-bottom-left-radius: 0;
+                        }
+                    }
+                    &__list {
+                        display: none;
+                        position: absolute;
+                        width: 100%;
+                        top: 100%;
+                        left: 0;
+                        right: 0;
+                        background: #fff;
+                        margin-top: 5px;
+                        max-height: 130px;
+                        text-align: center;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        z-index: 100;
+                        margin: 0;
+                        padding: 0;
+                        font-size: 13px;
+                        font-weight: 400;
+                        color: #424348;
+                        scrollbar-color: #424348;
+                        scrollbar-width: thin;
+                        overscroll-behavior: contain;
+                        li:hover {
+                            color: #32a961;
+                            background: rgba(50, 169, 97, 0.1);
+                        }
+                        &.children__list .children__item {
+                            position: relative;
+                            border-top: 1px solid #d1d4da;
+                            padding: 9px;
+                            cursor: pointer;
+                            list-style-type: none;
+                        }
+                        &::-webkit-scrollbar {
+                            height: 4px;
+                            width: 4px;
+                        }
+                        &::-webkit-scrollbar-track {
+                            background: rgb(194, 192, 190);
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background-color: #7a9789;
+                            border-radius: 5px;
+                        }
+                    }
+                    &__item {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
             }
             &-check {
                 margin-top: 16px;
@@ -101,6 +257,7 @@
                 background-color: #ffffff;
                 margin-top: 8px;
                 text-align: center;
+                border: none;
             }
             &-min:last-child {
                 margin-left: 10px;

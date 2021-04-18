@@ -3,7 +3,7 @@
         .owl-item.active + .active + .active {
             opacity: 0.4;
         }
-        .owl-prev {
+        .owl-next {
             right: 18%;
         }
     }
@@ -20,6 +20,11 @@
         &__apartments_picture + &__apartments_picture {
             margin-left: 15px;
         }
+    }
+}
+@media screen and (max-width: 1402px) {
+    .application__content_title {
+        padding-top: 0;
     }
 }
 @media screen and (max-width: 1380px) {
@@ -70,6 +75,9 @@
         display: block;
         &__content {
             margin: 0 auto;
+            &_title {
+                padding-top: 9px;
+            }
         }
         &__info {
             margin: 0 auto;
@@ -79,6 +87,9 @@
                 padding-left: 40px;
             }
         }
+    }
+    .application__content_title {
+        padding-top: 9px;
     }
 }
 @media screen and (max-width: 1150px) {
@@ -125,11 +136,10 @@
             &__select {
                 max-width: 400px;
                 width: 100%;
-                select {
+                .box-min {
                     max-width: 180px;
-                    width: 100%;
                 }
-                select + select {
+                .box-min + .box-min {
                     margin-left: 10px;
                 }
             }
@@ -145,6 +155,9 @@
                 &:nth-child(2) {
                     margin-left: 15px;
                 }
+            }
+            .application__content {
+                max-width: 1000px;
             }
         }
     }
@@ -176,14 +189,32 @@
             opacity: 0.4;
         }
     }
-    .carousel {
-        margin-top: 0;
-    }
     .promo__apartments {
         margin-bottom: 30px;
     }
     .response__feedback {
         font-size: 28px;
+    }
+}
+@media screen and (max-width: 920px) {
+    .carousel {
+        &__item {
+            width: 94px;
+            &_icon {
+                width: 50px;
+                height: 50px;
+            }
+            &_text {
+                font-size: 12px;
+            }
+        }
+        .owl-next {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    .promo__band {
+        margin-top: 15px;
     }
 }
 @media screen and (max-width: 890px) {
@@ -308,7 +339,7 @@
         right: 44%;
     }
     .left {
-        right: 65%;
+        right: 55%;
     }
     .promo__apartments_picture:nth-child(3) {
         display: none;
@@ -318,6 +349,9 @@
     }
     .response__rate_link + .response__rate_link {
         margin-left: 30px;
+    }
+    .placement button {
+        display: none;
     }
 }
 @media screen and (max-width: 700px) {
@@ -405,11 +439,11 @@
         padding: 60px 0;
         margin-top: 100px;
     }
-    .carousel .owl-prev {
+    .carousel .owl-next {
         width: 52px;
         height: 52px;
     }
-    .slider .owl-prev {
+    .slider .owl-next {
         right: 7%;
     }
 }
@@ -443,9 +477,6 @@
                     &:nth-child(2) {
                         display: none;
                     }
-                }
-                &_max {
-                    height: 250px;
                 }
             }
             &__address {
@@ -506,6 +537,9 @@
         &__block {
             margin-top: 30px;
         }
+        .left {
+            right: 57%;
+        }
     }
     .residence__block .residence__wrap .residence__wrap_text {
         top: 50%;
@@ -531,7 +565,21 @@
     .response__feedback {
         font-size: 22px;
     }
-    .slider .owl-prev {
+    .carousel {
+        &__item_icon,
+        .owl-next {
+            width: 45px;
+            height: 45px;
+        }
+        &__item_text {
+            font-size: 11px;
+            margin-top: 18px;
+        }
+        .owl-next {
+            right: -6px;
+        }
+    }
+    .slider .owl-next {
         right: 4%;
     }
     footer {
@@ -553,9 +601,6 @@
         display: none;
     }
     .placement {
-        button {
-            display: none;
-        }
         &__conditions {
             text-align: center;
             &_title {
@@ -565,6 +610,11 @@
     }
     .wrapper__title {
         font-size: 17px;
+    }
+    .carousel .owl-next {
+        width: 37px;
+        height: 37px;
+        right: -16px;
     }
     .slider {
         &__items {
@@ -584,10 +634,16 @@
                 margin-top: 30px;
             }
         }
-        .owl-prev {
+        .owl-next {
             right: 25px;
             width: 75px;
             height: 75px;
+        }
+    }
+    .residence__column {
+        &_relativ,
+        &_absolut {
+            height: 10px;
         }
     }
 }
@@ -604,9 +660,6 @@
         .aside {
             padding: 15px;
             height: 580px;
-        }
-        .promo__apartments_max {
-            height: 200px;
         }
         .promo__rating,
         .promo__address_option {
@@ -626,13 +679,18 @@
     .application__info_form {
         padding-left: 20px;
     }
-    .residence__column {
-        &_span {
-            margin-bottom: 15px;
-            max-width: 100%;
+    .residence {
+        &__column {
+            &_span {
+                margin-bottom: 15px;
+                max-width: 100%;
+            }
+            &_options {
+                display: block;
+            }
         }
-        &_options {
-            display: block;
+        .left {
+            right: 55%;
         }
     }
     .wrapper__services {
@@ -655,6 +713,23 @@
         }
         &_text {
             font-size: 12px;
+        }
+    }
+    .carousel {
+        &__item {
+            width: 70px;
+            &_icon {
+                width: 38px;
+                height: 38px;
+            }
+            &_text {
+                font-size: 9px;
+            }
+        }
+        .owl-next {
+            width: 30px;
+            height: 30px;
+            right: -10px;
         }
     }
     .slider {
@@ -710,6 +785,17 @@
     .response__rate img {
         width: 100%;
     }
+    .carousel {
+        &__item_icon {
+            width: 29px;
+            height: 29px;
+        }
+        .owl-next {
+            width: 25px;
+            height: 25px;
+            top: 0;
+        }
+    }
     .slider {
         &__items {
             &_inner {
@@ -723,7 +809,7 @@
                 height: 14px;
             }
         }
-        .owl-prev {
+        .owl-next {
             right: 22px;
             width: 45px;
             height: 45px;
@@ -737,57 +823,73 @@
     .main {
         .aside {
             height: 548px;
-            &__label_input-color,
-            &__select select {
+            &__label_input {
+                img {
+                    top: 21px;
+                }
+                &-color {
+                    font-size: 14px;
+                    height: 45px;
+                }
+            }
+            &__btn,
+            .box,
+            .box-min {
+                height: 45px;
+            }
+            .select__head {
                 font-size: 14px;
-                height: 45px;
             }
-            &__label {
-                font-size: 15px;
+            &__select {
+                .box-min .select-min .select__head_min,
+                .box-min .select-min .select__list_min {
+                    font-size: 14px;
+                }
             }
-            &__btn {
-                height: 45px;
-            }
-        }
-        .promo__apartments_max {
-            height: 150px;
         }
         .promo__apartments_bagr a {
             font-size: 12px;
         }
     }
+    .residence .left {
+        right: 53%;
+    }
     .carousel {
         &__item {
-            width: 90px;
-            height: 120px;
+            width: 60px;
             &_icon {
-                width: 50px;
-                height: 50px;
+                width: 25px;
+                height: 25px;
             }
             &_text {
-                font-size: 12px;
+                font-size: 8px;
             }
         }
-        .owl-prev {
-            width: 40px;
-            height: 40px;
+        .owl-next {
+            top: 9px;
         }
     }
     .application__info_form {
-        &-input,
-        &-min input {
+        &-min {
             font-size: 12px;
             max-width: 88px;
         }
         &-input {
-            padding: 12px;
-            max-width: 183px;
+            max-width: 182px;
         }
         &-head {
             font-size: 20px;
         }
         &-num {
-            max-width: 200px;
+            max-width: 185px;
+        }
+        &-img {
+            width: 25px;
+            height: 25px;
+            margin-right: 15px;
+        }
+        .parent__head, .children__head {
+            font-size: 13px;
         }
     }
     .wrapper__title {
@@ -795,12 +897,5 @@
     }
     footer .footer__text {
         font-size: 15px;
-    }
-}
-@media screen and (max-width: 325px) {
-    .slider .owl-prev {
-        right: 17px;
-        width: 40px;
-        height: 40px;
     }
 }

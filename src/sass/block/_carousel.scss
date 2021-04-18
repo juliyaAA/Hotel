@@ -1,11 +1,11 @@
 .carousel {
     width: 100%;
     height: auto;
-    margin-top: 39px;
+    margin-top: 44px;
     position: relative;
     &__item {
         width: 118px;
-        height: 158px;
+        height: auto;
         &_icons {
             width: 100%;
         }
@@ -18,17 +18,18 @@
                 width: 100%;
                 display: block;
                 height: 100%;
+                object-fit: contain;
             }
         }
         &_text {
-            margin-top: 30px;
+            margin-top: 28px;
             font-size: 14px;
             font-weight: 400;
             text-align: center;
             color: #505050;
         }
     }
-    .owl-prev{
+    .owl-next{
         position: absolute;
         top: -5px;
         right: 0;
@@ -40,5 +41,8 @@
             display: block;
             margin: 0 auto;
         }
+    }
+    .owl-theme .owl-nav {
+        margin-top: 0;
     }
 }

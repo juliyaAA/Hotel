@@ -86,13 +86,10 @@
     .owl-item.active + .active + .active + .active {
         opacity: 0.4;
     }
-    .owl-item.active + .active + .active + .active + .active {
-        opacity: 0.2;
-    }
     .owl-carousel .owl-nav.disabled {
         display: block;
     }
-    .owl-prev {
+    .owl-next {
         position: absolute;
         top: 104px;
         right: 390px;

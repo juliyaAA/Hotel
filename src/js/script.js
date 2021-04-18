@@ -4,27 +4,23 @@ $(document).ready(function () {
         dots: false,
         loop: true,
         nav: true,
-        navText: ["<img src='src/icons/prev.png'>", ""],
+        smartSpeed: 700,
+        navText: ["", "<img src='src/icons/prev.png'>"],
         responsive: {
             0: {
-                items: 2
-            },
-            550: {
-                items: 3
-            },
-            740: {
                 items: 4
-            }, 
-            950: {
+            },
+            768: {
                 items: 5
-            }, 
+            },
             1100: {
                 items: 4
-            }, 
+            },
             1300: {
                 items: 5
             }
         }
+
     });
     $(".slide-two").owlCarousel({
         items: 4,
@@ -32,7 +28,8 @@ $(document).ready(function () {
         nav: true,
         loop: true,
         margin: 30,
-        navText: ["<img src='src/icons/prev.png'>", ""],
+        smartSpeed: 700,
+        navText: ["", "<img src='src/icons/prev.png'>"],
         responsive: {
             0: {
                 items: 1
@@ -44,16 +41,195 @@ $(document).ready(function () {
             1005: {
                 items: 3
             },
-            1500: {
+            1100: {
                 items: 4
-            },
-            1650: {
-                items: 5
             }
-
         }
     });
+    // menu
+    $('.hamburger').on('click', function () {
+        $('.menu').slideToggle();
+        $(this).toggleClass('active');
+        $('.header').toggleClass('active');
+        $('.menu__item').toggleClass('active');
+        $('.menu__registr').slideToggle();
+    });
 
+    $('.menu__item').on('click', function () {
+        $('.menu__item').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('.promo__info_list a').on('click', function () {
+        $('.promo__info_list a').removeClass('active');
+        $(this).addClass('active');
+    });
+    $('.navigation__ul_list a').on('click', function () {
+        $('.navigation__ul_list a').removeClass('active');
+        $(this).addClass('active');
+    });
+    // arrow 
+    $('.wrapper__arrow').on('click', function () {
+        $('.wrapper__arrow').toggleClass('active');
+        $('.wrapper__flex').slideToggle();
+    });
+    $('#btn').on('click', function () {
+        $('.wrapper__flex').slideToggle();
+        $('.wrapper__arrow').removeClass('active');
+        $('html, body').animate({
+            scrollTop: $('.wrapper__title').offset().top - 200,
+        }, 400);
+    });
+
+    // calendar
+    $.datepicker.regional['ru'] = {
+        closeText: 'Закрыть',
+        prevText: 'Предыдущий',
+        nextText: 'Следующий',
+        currentText: 'Сегодня',
+        monthNames: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+        monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+        dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+        dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+        dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+        weekHeader: 'Не',
+        firstDay: 1,
+        isRTL: false,
+        showMonthAfterYear: false,
+        yearSuffix: ''
+    };
+    $.datepicker.setDefaults($.datepicker.regional['ru']);
+    var date = new Date();
+    date.setDate(date.getDate() + 1);
+
+    $("#datepicker").datepicker({
+        dateFormat: 'DD, dd MM yy',
+        minDate: 0,
+    });
+
+    $("#datepicker").datepicker().datepicker('setDate', 'today');
+
+    $("#datepicker-1").attr('disabled', 'disabled');
+
+    $("#datepicker-3").attr('disabled', 'disabled');
+
+    $("#datepicker-1").datepicker({
+        dateFormat: 'DD, dd MM yy',
+        minDate: 0,
+    });
+
+    $("#datepicker-2").datepicker({
+        dateFormat: "dd.mm.yy",
+        minDate: 0,
+    });
+
+    let tomorrow = new Date();
+
+    $("#datepicker-1").datepicker().datepicker('setDate', tomorrow);
+
+    $("#datepicker-2").datepicker().datepicker('setDate', 'today');
+
+
+    $("#datepicker-3").datepicker({
+        dateFormat: "dd.mm.yy",
+        minDate: 0,
+    });
+
+    let tomorrow1 = new Date();
+
+    $("#datepicker-3").datepicker().datepicker('setDate', tomorrow1);
+
+
+    $("#datepicker").on('change', function () {
+        onCheckin();
+    });
+
+    $("#datepicker-2").on('change', function () {
+        onCheckin1();
+    });
+
+    function onCheckin() {
+        if ($("#datepicker").val() !== '') {
+            $("#datepicker-1").removeAttr('disabled');
+            let dateMin = $("#datepicker").datepicker('getDate');
+            let rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+            $("#datepicker-1").datepicker('option', 'minDate', new Date(rMin));
+        } else {
+            $("#datepicker-1").val('');
+            $("#datepicker-1").attr('disabled', 'disabled');
+        }
+    }
+
+    function onCheckin1() {
+        if ($("#datepicker-2").val() !== '') {
+            $("#datepicker-3").removeAttr('disabled');
+            let dateMin = $("#datepicker-2").datepicker('getDate');
+            let rMin = new Date(dateMin.getFullYear(), dateMin.getMonth(), dateMin.getDate() + 1);
+            $("#datepicker-3").datepicker('option', 'minDate', new Date(rMin));
+        } else {
+            $("#datepicker-3").val('');
+            $("#datepicker-3").attr('disabled', 'disabled');
+        }
+    }
+    // aside select
+    $('.box').on('click', function () {
+        $('.box').toggleClass('active');
+    });
+    $('.min-2').on('click', function () {
+        $('.min-2').toggleClass('active');
+    });
+    $('.min-1').on('click', function () {
+        $('.min-1').toggleClass('active');
+    });
+    $('.select, .select-min').on('click', '.select__head, .select__head_min', function () {
+        if ($(this).hasClass('open active')) {
+            $(this).removeClass('open active');
+            $(this).next().fadeOut();
+        } else {
+            $('.select__head, .select__head_min').removeClass('open active');
+            $('.select__list, .select__list_min').fadeOut();
+            $(this).addClass('open active');
+            $(this).next().fadeIn();
+        }
+    });
+    $('.select, .select-min').on('click', '.select__item, .select__item_min', '.box', function () {
+        $('.select__head, .select__head_min').removeClass('open active');
+        $(this).parent().fadeOut();
+        $(this).parent().prev().text($(this).text());
+        $(this).parent().prev().prev().val($(this).text());
+    });
+    $(document).click(function (e) {
+        if (!$(e.target).closest('.select, .select-min').length) {
+            $('.select__head, .select__head_min').removeClass('open active');
+            $('.select__list, .select__list_min').fadeOut();
+            $('.box').removeClass('active');
+            $('.min-1').removeClass('active');
+            $('.min-2').removeClass('active');
+        }
+    });
+    //application calendar
+    $('.parent, .children').on('click', '.parent__head, .children__head', function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).next().fadeOut();
+        } else {
+            $('.parent__head, .children__head').removeClass('open active');
+            $('.parent__list, .children__list').fadeOut();
+            $(this).addClass('active');
+            $(this).next().fadeIn();
+        }
+    });
+    $('.parent, .children').on('click', '.parent__item, .children__item', function () {
+        $('.parent__head, .children__head').removeClass('active');
+        $(this).parent().fadeOut();
+        $(this).parent().prev().text($(this).text());
+        $(this).parent().prev().prev().val($(this).text());
+    });
+    $(document).click(function (e) {
+        if (!$(e.target).closest('.parent, .children').length) {
+            $('.parent__head, .children__head').removeClass('active');
+            $('.parent__list, .children__list').fadeOut();
+        }
+    });
     // gallery
     var sync1 = $("#sync1");
     var sync2 = $("#sync2");
@@ -127,7 +303,10 @@ $(document).ready(function () {
         sync1.data('owl.carousel').to(number, 300, true);
     });
     $('.promo__apartments img').on('click', function () {
-        $('#popup').css('display', 'block');
+        $('#popup').css('visibility', 'inherit');
+    });
+    $('#gallery').on('click', function () {
+        $('#popup').css('visibility', 'inherit');
     });
     // Закрытие gallery
     jQuery(function ($) {
@@ -135,81 +314,13 @@ $(document).ready(function () {
             var div = $(".popup__slider"); // тут указываем ID элемента
             if (!div.is(e.target) // если клик был не по нашему блоку
                 && div.has(e.target).length === 0) { // и не по его дочерним элементам
-                $("#popup").hide(); // скрываем его
+                $("#popup").css('visibility', 'hidden'); // скрываем его
             }
         });
     });
-    // menu
-    $('.hamburger').on('click', function () {
-        $('.menu').slideToggle();
-        $(this).toggleClass('active');
-        $('.header').toggleClass('active');
-        $('.menu__item').toggleClass('active');
-        $('.menu__registr').slideToggle();
-    });
-
-    $('.menu__item').on('click', function () {
-        $('.menu__item').removeClass('active');
-        $(this).addClass('active');
-    });
-    $('.promo__info_list a').on('click', function () {
-        $('.promo__info_list a').removeClass('active');
-        $(this).addClass('active');
-    });
-    $('.navigation__ul_list a').on('click', function () {
-        $('.navigation__ul_list a').removeClass('active');
-        $(this).addClass('active');
-    });
-    // arrow 
-    $('.wrapper__arrow').on('click', function () {
-        $('.wrapper__arrow').toggleClass('active');
-        $('.wrapper__flex').slideToggle();
-    });
-    $('#btn').on('click', function () {
-        $('.wrapper__flex').slideToggle();
-        $('.wrapper__arrow').removeClass('active');
-    });
-    // date
-    $.datepicker.regional['ru'] = {
-        closeText: 'Закрыть',
-        prevText: 'Предыдущий',
-        nextText: 'Следующий',
-        currentText: 'Сегодня',
-        monthNames: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
-        monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
-        dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
-        dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
-        dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
-        weekHeader: 'Не',
-        firstDay: 1,
-        isRTL: false,
-        showMonthAfterYear: false,
-        yearSuffix: ''
-    };
-    $.datepicker.setDefaults($.datepicker.regional['ru']);
-
-    var date = new Date();
-    date.setDate(date.getDate() + 1);
-    var date1 = new Date();
-    date1.setDate(date1.getDate());
-
-    $("#datepicker, #datepicker-2").datepicker({
-        dateFormat: "dd.mm.yy",
-        minDate: date1
-    });
-    $("#datepicker-1, #datepicker-3").datepicker({
-        dateFormat: "dd.mm.yy",
-        minDate: date
-    });
-});
-// gallery
-const gallery = document.getElementById('gallery'),
-    popup = document.getElementById('popup');
-
-gallery.addEventListener('click', () => {
-    popup.style.display = 'block';
 });
 // Закрытие gallery по кнопке Esc
+const popup = document.getElementById('popup');
 window.addEventListener("keydown", (event) => {
     if (event.keyCode == 27) {
         popup.style.display = 'none';

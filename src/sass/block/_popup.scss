@@ -59,4 +59,7 @@
             }
         }
     }
+    span[aria-label="Previous"], span[aria-label="Next"] {
+        display: none;
+    }
 }

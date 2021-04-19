@@ -31,10 +31,9 @@
         }
     }
     &__descr {
-        margin-top: 31px;
         display: flex;
         justify-content: space-between;
-        min-height: 94px;
+        padding-bottom: 29px;
     }
     &__name {
         font-size: 25px;
@@ -91,7 +90,6 @@
         background-color: #bfbfbf;
         display: block;
         margin: 0 auto;
-        margin-top: 35px;
     }
     &__address {
         display: flex;

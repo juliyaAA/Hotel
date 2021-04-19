@@ -21,6 +21,20 @@
     .application__content_title {
         padding-top: 0;
     }
+    .carousel {
+        &__item {
+            width: 100px;
+            &_icon {
+                width: 55px;
+                height: 55px;
+            }
+        }
+        .owl-next {
+            width: 55px;
+            height: 55px;
+            right: -7px;
+        }
+    }
     .slider .owl-item.active + .active + .active {
         opacity: 0.4;
     }
@@ -61,6 +75,21 @@
             }
         }
     }
+    .carousel {
+        &__item {
+            &_icon {
+                width: 50px;
+                height: 50px;
+            }
+            &_text {
+                font-size: 13px;
+            }
+        }
+        .owl-next {
+            width: 48px;
+            height: 48px;
+        }
+    }
     .response__rate_link + .response__rate_link {
         margin-left: 45px;
     }
@@ -86,8 +115,18 @@
             }
         }
     }
-    .application__content_title {
-        padding-top: 9px;
+    .carousel {
+        &__item {
+            width: 87px;
+            &_icon {
+                width: 45px;
+                height: 45px;
+            }
+        }
+        .owl-next {
+            width: 43px;
+            height: 43px;
+        }
     }
 }
 @media screen and (max-width: 1150px) {
@@ -159,6 +198,21 @@
             }
         }
     }
+    .carousel {
+        &__item {
+            &_icon {
+                width: 55px;
+                height: 55px;
+            }
+            &_text {
+                font-size: 14px;
+            }
+        }
+        .owl-next {
+            width: 50px;
+            height: 50px;
+        }
+    }
     .response__rate_link + .response__rate_link {
         margin-left: 75px;
     }
@@ -179,6 +233,9 @@
         .owl-item.active + .active {
             opacity: 0.4;
         }
+    }
+    .placement button {
+        display: none;
     }
 }
 @media screen and (max-width: 965px) {
@@ -210,9 +267,6 @@
             width: 50px;
             height: 50px;
         }
-    }
-    .promo__band {
-        margin-top: 15px;
     }
 }
 @media screen and (max-width: 890px) {
@@ -348,9 +402,6 @@
     .response__rate_link + .response__rate_link {
         margin-left: 30px;
     }
-    .placement button {
-        display: none;
-    }
 }
 @media screen and (max-width: 700px) {
     .promo {
@@ -359,10 +410,6 @@
         }
         &__name {
             font-size: 20px;
-        }
-        &__descr {
-            min-height: 77px;
-            margin-top: 10px;
         }
         &__address_item {
             font-size: 13px;
@@ -663,10 +710,6 @@
         .promo__address_option {
             display: none;
         }
-        .promo__descr {
-            min-height: 70px;
-            margin-top: 5px;
-        }
         .promo__apartments_bagr a {
             font-size: 14px;
         }
@@ -714,6 +757,7 @@
         }
     }
     .carousel {
+        margin-top: 35px;
         &__item {
             width: 70px;
             &_icon {

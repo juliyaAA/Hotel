@@ -303,10 +303,10 @@ $(document).ready(function () {
         sync1.data('owl.carousel').to(number, 300, true);
     });
     $('.promo__apartments img').on('click', function () {
-        $('#popup').css('visibility', 'inherit');
+        $('#popup').toggleClass('active');
     });
     $('#gallery').on('click', function () {
-        $('#popup').css('visibility', 'inherit');
+        $('#popup').toggleClass('active');
     });
     // Закрытие gallery
     jQuery(function ($) {
@@ -314,7 +314,7 @@ $(document).ready(function () {
             var div = $(".popup__slider"); // тут указываем ID элемента
             if (!div.is(e.target) // если клик был не по нашему блоку
                 && div.has(e.target).length === 0) { // и не по его дочерним элементам
-                $("#popup").css('visibility', 'hidden'); // скрываем его
+                $("#popup").removeClass('active'); // скрываем его
             }
         });
     });

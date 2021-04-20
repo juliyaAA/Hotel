@@ -300,11 +300,9 @@ $(document).ready(function () {
     });
     $('.promo__apartments img').on('click', function () {
         $('#popup').toggleClass('active');
-        // $('body').css('position', 'fixed');
     });
     $('#gallery').on('click', function () {
         $('#popup').toggleClass('active');
-        // $('body').css('position', 'fixed');
     });
     // Закрытие gallery
     jQuery(function ($) {
@@ -313,7 +311,6 @@ $(document).ready(function () {
             if (!div.is(e.target) // если клик был не по нашему блоку
                 && div.has(e.target).length === 0) { // и не по его дочерним элементам
                 $("#popup").removeClass('active'); // скрываем его
-                // $('body').css('position', 'inherit');
             }
         });
     });
